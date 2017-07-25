@@ -143,7 +143,6 @@ div.info_main {
 .info_section {
   padding: 1rem;
   transition: background-color 400ms;
-  transition: background-color 400ms;
 }
 .info_section:hover {
   background-color: #CDC5BF;
@@ -178,6 +177,9 @@ div.courses {
   padding-top: 2rem;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.path:hover {
+  background-color: #CDC5BF;
 }
 div.path {
   background-color: #EEE5DE;
@@ -220,15 +222,115 @@ div.thesis_main {
 
 footer {
   padding: 1.5rem;
-  background-color: #CDC5BF;
-  border-top: 1px solid #EEE5DE;
+  background-color: #EEE5DE;
   justify-content: space-between;
 }
-
-footer h6, footer div, .right ul li {
+footer h6, footer div, .policy ul li {
   display: inline-block;
   color: #141617;
 }
 div.right {
   text-align: right;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 800px) and (max-width: 930px) {
+  div.track {
+    width: 45%;
+  }
+}
+@media only screen and (min-width: 250px) and (max-width: 930px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h5 {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 250px) and (max-width: 800px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: inherit;
+  }
+  #mobile_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #mobile_nav img {
+    width: 2.5rem;
+  }
+  #mobile_nav img:hover {
+    opacity: .25;
+  }
+  div.header_content {
+    display: block;
+  }
+
+  /* Intro */
+
+  #intro {
+    display: inherit;
+    padding: 0;
+  }
+  #intro img {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  div.intro_titles {
+    padding: 2rem 1rem;
+  }
+
+  /* Academy Info */
+
+  .info_stack {
+    width: 100%;
+  }
+  .info_section {
+    display: inherit;
+  }
+  .info_section img{
+    width: 100%;
+    border-radius: 0;
+  }
+  .section_text {
+    padding: 2rem 1rem .5rem 1rem;
+   }
+
+   /* Courses Info */
+
+  .mobile .button {
+    text-align: left;
+    margin: .5rem 0;
+    padding: 1rem;
+  }
+
+  #courses .mobile {
+    padding-top: 1rem;
+  }
+
+  /* Thesis Info */
+
+  div.thesis {
+    padding: 2rem 0 1.5rem 0;
+  }
+
+  div.thesis_main {
+    width: 100%;
+    padding: 0rem;
+  }
+/* Footer */
+
+footer {
+  padding: 0.5rem;
+}
 }
